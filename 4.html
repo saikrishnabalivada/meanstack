@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>CALLBACK</title>
+</head>
+<body>
+<h3 id="demo"></h3>
+<h1 id="demo1"></h1>
+<script>
+function f1()
+{
+var d=new Date();
+document.getElementById("demo").innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+}
+function add(x,y,callback)
+{
+document.getElementById("demo1").innerHTML="SUM="+x+y;
+callback();
+}
+add(7,8,f1);
+f1();
+setInterval(f1,1000);
+</script>
+</body>
+</html

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Asynchrounous</title>
+</head>
+<body>
+<h3 id="demo"></h3>
+<script>
+
+var i;
+function f1()
+{
+document.write("<h1>");
+document.write("This is Asynchronous approach"+"<br>");
+document.write("</h1>");
+}
+function f2()
+{
+document.write("<h1 style='color:blue'>");
+document.write("welocme"+"<br>");
+document.write("</h1>");
+}
+function f3()
+{
+var d=new Date();
+document.getElementById("demo").innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+}
+f1();
+setInterval(f3,1000);
+f2();
+</script>
+</body>
+</html>
